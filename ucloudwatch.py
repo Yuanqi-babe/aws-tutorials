@@ -19,12 +19,9 @@ dashboard_body = """
          "height":6,
          "properties":{
             "metrics":[
-               [
-                  "AWS/ElasticMapReduce",
-                  "CoreNodesRunning",
-                  "JobFlowId",
-                  "j-2ACT3HJ3KZW0V"
-               ]
+               ["AWS/ElasticMapReduce","MRActiveNodes","JobFlowId","j-2SU5KB2AGD1JF",{"visible":false,"id":"m1"} ],
+            [".","MRTotalNodes","JobFlowId","j-2SU5KB2AGD1JF",{"visible":false,"id":"m2"} ],
+            [ { "expression": "100*(m1/m2)", "label": "EMRActiveNodesRatio", "id": "e3","visible":true } ]
             ],
             "period":300,
             "stat":"Average",
@@ -53,3 +50,7 @@ dashboard_body = """
 # 最后，通过CloudWatch PutDashboard API更新控制看板的内容。
 response = CW_client.put_dashboard(DashboardName='test',
                                    DashboardBody=dashboard_body)
+
+
+# 如何添加自定义数学函数
+# [ { "expression": "SUM(METRICS())", "label": "Sum of DiskReadbytes", "id": "e3" } ]
