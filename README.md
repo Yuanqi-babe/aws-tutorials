@@ -1,5 +1,5 @@
 # aws-tutorials
-This repo is designed for some simple helper scripts to address some issues on AWS
+This repo is designed for some simple helper scripts to guide some developments on AWS
 
 Tree structure of this repo:
 ```
