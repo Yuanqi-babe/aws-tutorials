@@ -2,7 +2,7 @@
 This repo is designed for some simple helper scripts to address some issues on AWS
 
 Tree structure of this repo:
-
+```
 |____incident_manager_lambda_function.py
 |____cwlogs_driven_recaller_lambda_function.py
 |____utils
@@ -27,7 +27,7 @@ Tree structure of this repo:
 | |____uwebhook.py
 |____emr_manual_lambda_function.py
 |____recaller_lambda_function.py
-
+```
 ## How to use this repo?
 In utils folder, there are some helper functions for each AWS service involved. For example, usecrets contains some functions interacting with AWS Secrets Manager.
 Other functions that lie in main directory are lambda handlers. Specifically,
