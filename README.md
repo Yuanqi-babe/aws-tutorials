@@ -36,7 +36,6 @@ Other functions that lie in main directory are lambda handlers. Specifically,
 - cwlogs_dirven_recaller_lambda_function.py is a Recaller lambda that is based on capturing CloudWatch error logs and respond accordingly.
 - emr_manual_lambda_function.py is a lambda that can automatically push and delete related alarm and event triggers based on EMR on/off states.
 - recaller_lambda_function.py is a lambda that is scheduled to run, in a fixed time interval, to check if any failed notification happens, and if so, triggers re-notification and incidence escalation.
-- 
 
 
 
